@@ -112,16 +112,15 @@ public class LexTo {
         typeList.addElement(new Integer(3));
       }
       //Digits
-      else if(((ch>='0')&&(ch<='9'))||((ch>='�')&&(ch<='�'))) {
-        while((pos<text.length())&&(((ch>='0')&&(ch<='9'))||((ch>='�')&&(ch<='�'))||(ch==',')||(ch=='.')))
-          ch=text.charAt(pos++);
+      else if(((ch>='0')&&(ch<='9'))||((ch>='๐')&&(ch<='๙'))) {
+          while((pos<text.length())&&(((ch>='0')&&(ch<='9'))||((ch>='๐')&&(ch<='๙'))||(ch==',')||(ch=='.')))          ch=text.charAt(pos++);
         if(pos<text.length())
           pos--;
         indexList.addElement(new Integer(pos));
         typeList.addElement(new Integer(3));
       }
       //Special characters
-      else if((ch<='~')||(ch=='�')||(ch=='�')||(ch=='�')||(ch=='�')||(ch==',')) {
+      else if((ch<='~')||(ch=='ๆ')||(ch=='ฯ')||(ch=='“')||(ch=='”')||(ch==',')) {
         pos++;
         indexList.addElement(new Integer(pos));
         typeList.addElement(new Integer(4));
